@@ -1,0 +1,20 @@
+﻿@model TripViewModel
+
+<h1><strong>Add Things to do</strong></h1>
+
+<form asp-action="Add" method="post">
+    <input type="hidden" asp-for="PageNum" />
+    <div class="mb-3">
+        <label asp-for="trip.Thingstodo1" class="form-label">Things to do</label>
+        <input asp-for="trip.Thingstodo1" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="trip.Thingstodo2" class="form-label">Things to do</label>
+        <input asp-for="trip.Thingstodo2" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="trip.Thingstodo3" class="form-label">Things to do</label>
+        <input asp-for="trip.Thingstodo3" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-secondary">Save</button>
+</form>

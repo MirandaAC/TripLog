@@ -1,0 +1,40 @@
+﻿@model List<Trip>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<br />
+
+<a asp-controller="Trip" asp-action="Add" asp-route-id="1" class="btn text-primary"><strong>Add Trip</strong></a>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Destination</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Accomodations</th>
+            <th>Things To do</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var trip in Model)
+        {
+            <tr>
+                <td>@trip.Destination</td>
+                <td>@trip.StartDate?.ToShortDateString()</td>
+                <td>@trip.EndDate?.ToShortDateString()</td>
+                <td>
+                    @trip.Accomodation <br />
+                    @trip.Phone <br />
+                    @trip.Email
+                </td>
+                <td>
+                    @trip.Thingstodo1 <br />
+                    @trip.Thingstodo2 <br />
+                    @trip.Thingstodo3
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,17 @@
+﻿@model TripViewModel
+
+<h1><strong>Add Info</strong></h1>
+
+<form asp-action="Add" method="post">
+    <input type="hidden" asp-for="PageNum" />
+    <div class="mb-3">
+        <label asp-for="trip.Phone" class="form-label">Phone Number</label>
+        <input asp-for="trip.Phone" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="trip.Email" class="form-label">Email Address</label>
+        <input asp-for="trip.Email" class="form-control" />
+    </div>
+    
+    <button type="submit" class="btn btn-secondary">Next</button>
+</form>
